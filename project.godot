@@ -19,6 +19,10 @@ config/icon="res://Player/Art/icon.svg"
 
 Lightdarkmanager="*res://Scripts/Autoloads/lightdarkmanager.gd"
 
+[global_group]
+
+Player=""
+
 [input]
 
 move_left={

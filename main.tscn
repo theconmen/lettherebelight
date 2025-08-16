@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh27pq14uc411"]
+[gd_scene load_steps=6 format=3 uid="uid://bh27pq14uc411"]
 
 [ext_resource type="PackedScene" uid="uid://cjxjd354y723c" path="res://Player/player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://du3cug6aw0oag" path="res://Levels/base_tile_map.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://lyxjbyeg7r3t" path="res://light_dark.gd" id="3_1bvp3"]
 [ext_resource type="Shader" uid="uid://df1216hjwsp4k" path="res://lightdark.gdshader" id="3_h2yge"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("3_h2yge")
+shader_parameter/brightness = 0.0
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_0xm2m")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_0xm2m")]
 position = Vector2(192, 125)
 
 [node name="ActiveLevel" type="Node2D" parent="."]
@@ -17,8 +19,10 @@ position = Vector2(192, 125)
 [node name="BaseTileMap" parent="ActiveLevel" instance=ExtResource("1_ig7tw")]
 
 [node name="LightDark" type="CanvasLayer" parent="."]
+script = ExtResource("3_1bvp3")
 
 [node name="ColorRect" type="ColorRect" parent="LightDark"]
 material = SubResource("ShaderMaterial_1bvp3")
 offset_right = 1151.0
 offset_bottom = 637.0
+color = Color(0.65834, 0.65834, 0.65834, 1)
