@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bh27pq14uc411"]
+[gd_scene load_steps=7 format=3 uid="uid://bh27pq14uc411"]
 
 [ext_resource type="PackedScene" uid="uid://cjxjd354y723c" path="res://Player/player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://du3cug6aw0oag" path="res://Levels/base_tile_map.tscn" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://lyxjbyeg7r3t" path="res://light_dark.gd" id="3_1bvp3"]
-[ext_resource type="Shader" uid="uid://df1216hjwsp4k" path="res://lightdark.gdshader" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://lyxjbyeg7r3t" path="res://Scripts/LIghtDarkIMplementation/light_dark.gd" id="3_1bvp3"]
+[ext_resource type="Shader" uid="uid://df1216hjwsp4k" path="res://Scripts/LIghtDarkIMplementation/lightdark.gdshader" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://drfvxqelaiqct" path="res://Levels/light_showing_map.tscn" id="3_lquwl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1bvp3"]
 shader = ExtResource("3_h2yge")
@@ -17,6 +18,9 @@ position = Vector2(192, 125)
 [node name="ActiveLevel" type="Node2D" parent="."]
 
 [node name="BaseTileMap" parent="ActiveLevel" instance=ExtResource("1_ig7tw")]
+
+[node name="Light_showing_map" parent="ActiveLevel" instance=ExtResource("3_lquwl")]
+position = Vector2(1617, -288)
 
 [node name="LightDark" type="CanvasLayer" parent="."]
 script = ExtResource("3_1bvp3")

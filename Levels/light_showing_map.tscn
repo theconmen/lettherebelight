@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=4 uid="uid://drfvxqelaiqct"]
+
+[ext_resource type="TileSet" uid="uid://byugh4m057jsw" path="res://Levels/LevelArt/tile_resource.tres" id="1_3o1od"]
+[ext_resource type="Script" uid="uid://dsn7kg75wavo5" path="res://Levels/light_showing_map.gd" id="2_8q7yo"]
+
+[node name="Light_showing_map" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAAAAAMAAAADAAEAAAABAAMAAAADAAIAAAACAAMAAAAEAAEAAAADAAMAAAADAAEAAAAEAAMAAAAEAAEAAAAFAAMAAAACAAAAAAAGAAMAAAAEAAIAAAAIAAEAAAACAAEAAAAJAAEAAAAEAAAAAAAKAAEAAAAEAAAAAAALAAEAAAACAAEAAAAMAAEAAAADAAAAAAANAAEAAAAEAAEAAAAQAAAAAAAEAAIAAAARAAAAAAAEAAEAAAASAAAAAAAEAAEAAAAXAAAAAAAEAAIAAAAWAAAAAAACAAEAAAAVAAAAAAAEAAEAAAAUAAAAAAAEAAEAAAATAAAAAAADAAEAAAA=")
+tile_set = ExtResource("1_3o1od")
+script = ExtResource("2_8q7yo")
